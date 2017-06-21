@@ -12,17 +12,26 @@
 */
 
 use \App\Task;
+use \Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function () {
-    $name = 'Zen';
+Route::get('/hello/{name?}', function ($name = 'Zen') {
+    // $name = 'Zen';
     return view('hello', ['name' => $name]);
 });
 
-Route::match(['get', 'post'], '/upload', function () {
+Route::get('/api/tasks/{task}', function (App\Task $task) {
+    dd($task);
+});
+
+Route::match(['get', 'post'], '/upload', function (Request $request) {
+    if ($request->isMethod('post')) {
+        //dd($request->file('uploadfile'));
+        dd($request->all());
+    }
     return view('upload');
 });
 

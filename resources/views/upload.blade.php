@@ -10,10 +10,18 @@
 <body>
 <div>Upload File.</div>
 <div>
-<form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" id="inputfile" name="uploadfile">
-    <button type="submit">Submit</button>
-</form>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div>
+            <label>UserId:</label><input type="text" id="uid" name="userid">
+        </div>
+        <div>
+            <input type="file" id="inputfile" name="uploadfile">
+        </div>
+        <div>
+            {{csrf_field()}}
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </div>
 </body>
 </html>
