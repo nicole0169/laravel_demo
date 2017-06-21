@@ -22,6 +22,10 @@ Route::get('/hello', function () {
     return view('hello', ['name' => $name]);
 });
 
+Route::match(['get', 'post'], '/upload', function () {
+    return view('upload');
+});
+
 Route::get('tasks', 'TasksController@index');
 
 Route::get('tasks/{task}', 'TasksController@show');

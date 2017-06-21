@@ -15,9 +15,9 @@ class TasksController extends Controller
         return view('tasks/index', compact('completedTasks', 'unCompletedTasks'));
     }
 
-    public function show($task)
+    public function show(Task $task)
     {
-        $task = Task::findorFail($task);
+        //$task = Task::findorFail($task);
         return view('tasks/show', compact('task'));
     }
 }
