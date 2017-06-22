@@ -27,13 +27,7 @@ Route::get('/api/tasks/{task}', function (App\Task $task) {
     dd($task);
 });
 
-Route::match(['get', 'post'], '/upload', function (Request $request) {
-    if ($request->isMethod('post')) {
-        //dd($request->file('uploadfile'));
-        dd($request->all());
-    }
-    return view('upload');
-});
+Route::match(['get', 'post'], '/upload', 'UserFilesController@index');
 
 Route::get('tasks', 'TasksController@index');
 
