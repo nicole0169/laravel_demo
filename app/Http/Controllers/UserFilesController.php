@@ -11,8 +11,10 @@ class UserFilesController extends Controller
     {
         if ($request->isMethod('post')) {
             //dd($request->file('uploadfile'));
-            print_r($request->input('userid'));
-            dd($request->all());
+            /*print_r($request->input('userid'));
+            dd($request->all());*/
+            $path = $request->file('uploadfile')->store('test');
+            dd($path);
         }
         return view('upload');
     }
