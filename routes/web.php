@@ -32,17 +32,5 @@ Route::match(['get', 'post'], '/upload', 'UserFilesController@index');
 Route::get('tasks', 'TasksController@index');
 
 Route::get('tasks/{task}', 'TasksController@show');
-/*
-Route::get('/tasks', function () {
-    //$tasks = DB::table('tasks')->latest()->get();
-    $completedTasks = Task::latest()->completed()->get();
-    $unCompletedTasks = Task::latest()->unCompleted()->get();
-    return view('tasks.index', compact('completedTasks', 'unCompletedTasks'));
-});
 
-Route::get('/tasks/{task}', function ($id) {
-    //$task = DB::table('tasks')->find($id);
-    $task = Task::findorFail($id);
-    return view('tasks.show', compact('task'));
-});
-*/
+Route::match(['get', 'post'], '/login', 'UserLoginController@index');
