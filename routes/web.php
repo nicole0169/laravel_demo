@@ -35,8 +35,6 @@ Route::get('tasks/{task}', 'TasksController@show');
 
 Route::match(['get', 'post'], '/login', 'UserLoginController@index');
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+Route::get('/admin', 'Admin\IndexController@index');
 
-Route::get('/admin/foo', 'FooController@index');
+Route::get('/admin/foo', 'Admin\FooController@index');
