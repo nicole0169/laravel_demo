@@ -38,3 +38,5 @@ Route::match(['get', 'post'], '/login', 'UserLoginController@index');
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/admin/foo', 'FooController@index');
