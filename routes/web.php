@@ -38,3 +38,5 @@ Route::match(['get', 'post'], '/login', 'UserLoginController@index');
 Route::get('/admin', 'Admin\IndexController@index');
 
 Route::get('/admin/foo', 'Admin\FooController@index');
+
+Route::get('/admin/tasks', 'Admin\TasksController@index');
