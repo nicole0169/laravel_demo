@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var elixir = require('laravel-elixir');
 
 // 拷贝任何需要的文件
 gulp.task("copyfiles", function () {
@@ -23,8 +22,4 @@ gulp.task("copyfiles", function () {
     //Datatables
     gulp.src("vendor/almasaeed2010/adminlte/plugins/datatables/**")
         .pipe(gulp.dest("public/assets/datatables"));
-});
-
-elixir(function (mix) {
-
 });
