@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var elixir = require('laravel-elixir');
 
 // 拷贝任何需要的文件
-gulp.task("copyfiles", function() {
+gulp.task("copyfiles", function () {
     gulp.src("vendor/almasaeed2010/adminlte/dist/css/AdminLTE.min.css")
         .pipe(gulp.dest("public/assets/css"));
     gulp.src("vendor/almasaeed2010/adminlte/dist/css/skins/skin-blue.min.css")
@@ -19,9 +19,12 @@ gulp.task("copyfiles", function() {
         .pipe(gulp.dest("public/assets/fonts"));
     gulp.src("vendor/almasaeed2010/adminlte/dist/img/**")
         .pipe(gulp.dest("public/assets/img"));
+
+    //Datatables
+    gulp.src("vendor/almasaeed2010/adminlte/plugins/datatables/**")
+        .pipe(gulp.dest("public/assets/datatables"));
 });
 
-
-elixir(function(mix) {
+elixir(function (mix) {
 
 });

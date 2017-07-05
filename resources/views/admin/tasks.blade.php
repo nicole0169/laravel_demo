@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.tables')
 
 @section('content')
     <div class="box box-solid box-default">
