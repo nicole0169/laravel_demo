@@ -1,4 +1,4 @@
-@include('layouts.Common.header')
+@include('layouts.Tables.header')
         <!--Sidebar-->
 @include('layouts.Common.sidebar')
         <!-- Content Wrapper. Contains page content -->

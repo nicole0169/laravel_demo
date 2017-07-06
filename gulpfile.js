@@ -22,4 +22,12 @@ gulp.task("copyfiles", function () {
     //Datatables
     gulp.src("vendor/almasaeed2010/adminlte/plugins/datatables/**")
         .pipe(gulp.dest("public/assets/datatables"));
+
+    //SlimScroll
+    gulp.src("vendor/almasaeed2010/adminlte/plugins/slimScroll/**")
+        .pipe(gulp.dest("public/assets/slimScroll"));
+
+    //FastClick
+    gulp.src("vendor/almasaeed2010/adminlte/plugins/fastclick/**")
+        .pipe(gulp.dest("public/assets/fastclick"));
 });

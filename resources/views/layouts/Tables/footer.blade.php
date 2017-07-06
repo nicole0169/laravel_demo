@@ -93,6 +93,13 @@
 <script src="/assets/js/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/assets/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="/assets/datatables/jquery.dataTables.min.js"></script>
+<script src="/assets/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/assets/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/assets/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="/assets/js/app.min.js"></script>
 
@@ -100,5 +107,11 @@
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the
      fixed layout. -->
+<!-- page script -->
+<script>
+    $(document).ready(function () {
+        $('#tasksTable').DataTable();
+    });
+</script>
 </body>
 </html>
